@@ -1,0 +1,435 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 500vh;
+    width: 80%;
+    margin: auto;
+    font-family:sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.heading{
+    margin: auto;
+    padding-bottom: 50px;
+    line-height: 5px;
+}
+.heading h2{
+    font-size: 35px;
+    text-align: center;
+    color:  rgb(186, 136, 98);
+    text-transform: capitalize;
+}
+.heading span{
+    width: 70px;
+    height: 1.8px;
+    background-color:rgb(119, 96, 96) ;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+/* ///////////////////////////////////////////////header/////////////////////////////// */
+header{
+    padding-top: 30px;
+}
+header img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.nav-item{
+    float: left;
+    margin-top: -80px;
+    margin-left: 120px;
+}
+.nav-link:before,.nav-link:after{
+content:"";
+position: absolute;
+border:3px solid  rgb(232, 211, 178); 
+left: 0;
+top:0; 
+transition: transform 0.2s;
+}
+.nav-link:before{
+    border-width: 0 3px;
+    height: 99%; 
+    width: 96%;
+    transform: scale3d(1,0,1);
+}
+.nav-link:hover:before{
+ transform: scale3d(1,1,1);
+}
+.nav-link:after{
+border-width: 3px 0;
+height:90% ; 
+width: 99%;
+transform: scale3d(0,1,1);
+transform-origin: left;
+}
+.nav-link:hover:after{
+ transform: scale3d(1,1,1);
+ transition-delay: 0.2s;
+}
+.nav-link{
+    color: rgb(152, 117, 101);
+    display: block;
+    padding: 10px;
+    position: relative;
+    text-transform: capitalize;
+}
+.navl{
+    display: inline-block;
+    margin-left: 30px;
+    font-size:18px;
+    font-weight: bold;
+}
+.dropdown{
+    position: relative;
+}
+.table{
+    position: absolute;
+    width: 450px;
+    border: 3px solid rgb(232, 211, 178);
+    background-color:white;
+    padding: 15px 10px;
+    margin-top: 10px;
+    transform: scale(0);
+    transition: transform 0.5s , visibility .5s;
+    visibility: hidden;
+}
+.dropdown:hover .table{
+    transform: scale(1);
+    visibility: visible;
+}
+.column{
+    display: table-cell;
+    text-align: left;
+    text-decoration-style: solid;
+    list-style-type: none;
+}
+.column li a{
+    display: block;
+    padding: 5px;
+    color:rgb(152, 117, 101);
+    text-align: center;
+}
+.t-head{
+    border-bottom: 1px dotted rgb(112, 75, 75);
+}
+.icons{
+    float: right;
+    margin-top: -70px;
+    font-size: 18px;
+    color:rgb(202, 177, 138);
+}
+.icons i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.icons sub{
+    border-radius: 50%;
+    padding:3px;
+    background-color:rgb(99, 75, 75) ;
+    color: white;  
+}
+/* ///////////////////////////////////////////////slider///////////////////////////////// */
+.slider{
+    background-color:rgb(49, 36, 36);
+    height: 70vh;
+    margin-top:30px;
+    overflow: auto;
+    padding:50px 100px;
+}
+.start-heading{
+    float:left;
+    width: 60%;
+    padding-left: 50px;
+}
+.start-heading h2{
+   color: rgb(248, 246, 218);
+    text-transform: capitalize;
+    font-size: 55px;
+    line-height: 70px;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.start-heading button{
+    padding: 7px 20px;
+    color: rgb(107, 72, 72);
+    font-size: 18px;
+}
+.slider img{
+    display: block;
+    float: right;
+    width: 350px;
+    height: 400px;
+    margin-left: -50px;
+    border-radius: 30px;
+}
+/* /////////////////////////////////////////categories////////////////////////////// */
+.categories{
+    margin-top: 150px;
+    height: 100vh;
+}
+.heading:hover span{
+    width: 120px;
+}
+.categories-cont{
+    display: flex;
+    justify-content:space-around;
+}
+.category{
+    height: 380px;
+}
+.category img{
+    width: 290px;
+    height: 380px;
+}
+.category-text{
+    position: relative;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    line-height: 3px;
+}
+.category-text h4{
+    color: rgb(205, 167, 139);
+    font-size: 17px;
+}
+.category-text h2{
+    color: rgb(112, 81, 81);
+    font-size: 20px;
+}
+.category-text a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    display: block;
+    color: white;
+    background-color:rgb(82, 65, 65);
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    visibility: hidden;
+}
+.category:hover a{
+    visibility: visible;
+}
+/* ////////////////////////////////////////////////////discounts////////////////////////////////// */
+.discounts-cont{
+    display: flex; 
+    height: 350px;
+    margin-top: -50px;
+}
+.marketing{
+    position: relative;
+    line-height: 10px;
+    flex: 2;
+    width: 20%;
+    background-color: rgb(247, 243, 236);
+    padding: 20px;
+}
+.discount1{
+    flex: 1;
+    background-image: url(../images/firstdiscount.jpeg);
+    background-size: cover;
+    margin: 0px 20px;
+    position: relative;
+    transition: 0.5s;
+}
+.discount2{
+    flex: 1;
+    background-image: url(../images/Summer\ fragrance.jpeg);
+    background-size: cover;
+    position: relative;
+    transition: 0.5s;
+}
+.marketing i{
+    font-size: 70px;
+    color: rgb(206, 144, 96);
+}
+.manager{
+    position: absolute;
+    top: 20px;
+    left: 90px;
+}
+.manager h2{
+text-transform: capitalize;
+color: rgb(102, 72, 72);
+}
+.manager p{
+    margin-top: -10px;
+    color: rgb(105, 77, 77);
+}
+.marketing p{
+    line-height: 30px;
+    color: rgb(102, 72, 72);
+}
+.dis-txt p{
+   color: rgb(143, 101, 101);
+    font-size: 20px;
+}
+.dis-txt h3{
+    /* color: rgb(117, 82, 82); */
+    color: rgb(83, 63, 63);
+    font-size: 25px;
+}
+.line{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+}
+.cut{
+    width: 50px;
+    height: 2px;
+    background-color:rgb(184, 144, 114);
+}
+.mid{
+    margin: 0px 10px;
+}
+.dis-txt{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    line-height: 5px;
+    text-transform: capitalize;
+}
+.discount1:hover,.discount2:hover{
+    transform: scale(1.1,1.1);
+}
+/* ////////////////////////////////////////////sprites/////////////////////////////////////// */
+.sprite-cont{
+    display: flex;
+    margin: 50px 0px;
+}
+.sprite{
+    text-align: center;
+    border-right:1px solid black ;
+    line-height: 20px;
+}
+.sprite-text{
+    text-transform: capitalize;
+}
+.sprite-text h3{
+   color:  rgb(206, 144, 96);
+   font-size: 20px;
+}
+.sprite-text span{
+    color: rgb(102, 72, 72);
+}
+.s5{
+    border: 0;
+}
+.sprite-icon{
+    height: 55px;
+    background-image:url(../images/WhatsApp\ Image\ 2024-10-07\ at\ 05.42.44_2ecf7f84.jpg) ;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+.i1{
+    background-position: center -86px;
+}
+.sprite:hover .i1{
+    background-position: center 5px;
+}
+.i2{
+    background-position: center -273px;
+}
+.sprite:hover .i2{
+    background-position: center -180px;
+}
+.i3{
+    background-position: center -455px;
+}
+.sprite:hover .i3{
+    background-position: center -366px;
+}
+.i4{
+    background-position: center -639px ;
+}
+.sprite:hover .i4{
+    background-position: center -549px;
+}
+.i5{
+    background-position: center -826px;
+}
+.sprite:hover .i5{
+    background-position: center -734px;
+}
+/* //////////////////////////////////////////////////products////////////////////////////// */
+.products{
+    margin-top: 100px;
+}
+.list{
+    display: block;
+    text-align: center;
+    margin-top: -50px;
+}
+.list li{
+    display: inline-block;
+    padding: 30px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(161, 118, 118);
+}
+.products-cont{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.product img{
+    width: 350px;
+    height: 450px;
+}
+.product-img{
+    position: relative;
+}
+.product-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.5s;
+    opacity: 0.8;
+}
+.product-img:hover .product-overlay{
+    transform: scaleX(1);
+} 
+ .contacts{
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ }
+.contacts li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color:bisque;
+    text-align: center;
+}
+.contacts li i{
+   line-height: 40px;
+   font-size: 25px;                                                                                        
+}
+.product-descripe{
+    margin-top: 10px;
+    line-height: 5px;
+}
+.product-descripe i{
+    font-size: 15px;
+   color: rgb(206, 144, 96);
+}
+.product-descripe p{
+    text-transform: capitalize;
+       color: rgb(112, 72, 72);
+}
+.product-descripe h3{
+    color: rgb(113, 91, 91);
+}
